@@ -77,7 +77,7 @@ function PaymentLogos() {
         <div className="h-6 w-11 bg-white rounded border border-gray-100 flex items-center justify-center overflow-hidden p-0.5">
           <img src="/payment-logos/apple-pay.png" alt="Apple Pay" className="max-h-full max-w-full object-contain" />
         </div>
-        <div className="h-6 w-10 bg-white rounded border border-gray-100 flex items-center justify-center overflow-hidden p-0.5">
+        <div className="h-6 w-11 bg-white rounded border border-gray-100 flex items-center justify-center overflow-hidden p-0.5">
           <img src="/payment-logos/shop-pay.png" alt="Shop Pay" className="max-h-full max-w-full object-contain" />
         </div>
         <div className="h-6 w-10 bg-white rounded border border-gray-100 flex items-center justify-center overflow-hidden p-0.5">
