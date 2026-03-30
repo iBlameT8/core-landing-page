@@ -813,11 +813,11 @@ function SectionPricing() {
     subscriptionPrice: "€38,99",
     subscriptionOriginal: "€49,99",
     subscriptionSavings: "Du sparst 11€",
-    subscriptionPerNight: "€1,30/Nacht",
+    subscriptionPerNight: "€0,78/Nacht",
     oneTimeLabel: "Einmalig",
     oneTimeSub: "Keine Verpflichtung",
     oneTimePrice: "€49,99",
-    oneTimePerNight: "€1,67/Nacht",
+    oneTimePerNight: "€1,00/Nacht",
     included: ["30 Tage Geld-zurück-Garantie", "Versand in 1-2 Tagen", "Kein Fischgeschmack"],
     ctaSubscription: "Jetzt abonnieren",
     ctaOneTime: "Jetzt kaufen",
@@ -909,8 +909,9 @@ function SectionPricing() {
                   {/* Subscription */}
                   <label className="block cursor-pointer">
                     <input type="radio" name="plan" value="abo" checked={selectedPlan === "abo"} onChange={() => setSelectedPlan("abo")} className="sr-only" />
-                    <div className={`rounded-xl p-4 border-2 transition-all ${selectedPlan === "abo" ? "border-[oklch(0.42_0.12_10)]" : "border-gray-200"}`}
+                    <div className={`rounded-xl p-4 border-2 transition-all relative ${selectedPlan === "abo" ? "border-[oklch(0.42_0.12_10)]" : "border-gray-200"}`}
                       style={selectedPlan === "abo" ? { background: "oklch(0.99 0.01 10)" } : {}}>
+                      <span className="absolute -top-3 -right-3 text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 border border-amber-200">{p.subscriptionPopular}</span>
                       <div className="flex items-start justify-between gap-2">
                         <div className="flex items-start gap-2.5">
                           <div className={`w-4 h-4 rounded-full border-2 mt-0.5 flex-shrink-0 flex items-center justify-center ${selectedPlan === "abo" ? "border-[oklch(0.42_0.12_10)]" : "border-gray-300"}`}>
@@ -920,7 +921,6 @@ function SectionPricing() {
                             <div className="flex items-center gap-2 flex-wrap">
                               <span className="text-sm font-semibold text-gray-800">{p.subscriptionLabel}</span>
                               <span className="text-[10px] font-bold px-2 py-0.5 rounded-full text-white" style={{ background: BRAND }}>{p.subscriptionBadge}</span>
-                              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 border border-amber-200">{p.subscriptionPopular}</span>
                             </div>
                             <p className="text-xs text-gray-400 mt-0.5">{p.subscriptionSub}</p>
                           </div>
