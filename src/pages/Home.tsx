@@ -61,20 +61,38 @@ function PaymentLogos() {
   return (
     <div className="flex flex-col items-center gap-2 mt-4 w-full">
       <div className="flex flex-wrap gap-2 justify-center">
-        {logos.slice(0, 7).map((logo) => (
-          <div key={logo.name} className="h-6 w-10 bg-white rounded border border-gray-100 flex items-center justify-center overflow-hidden p-0.5">
-            <img src={logo.src} alt={logo.name} className="max-h-full max-w-full object-contain" />
-          </div>
-        ))}
+        {/* Row 1: Mastercard, AMEX, VISA, Stripe, Apple Pay, Shop Pay, Klarna */}
+        <div className="h-6 w-10 bg-white rounded border border-gray-100 flex items-center justify-center overflow-hidden p-0.5">
+          <img src="/payment-logos/mastercard.png" alt="Mastercard" className="max-h-full max-w-full object-contain" />
+        </div>
+        <div className="h-6 w-10 bg-white rounded border border-gray-100 flex items-center justify-center overflow-hidden p-0.5">
+          <img src="/payment-logos/amex.png" alt="AMEX" className="max-h-full max-w-full object-contain" />
+        </div>
+        <div className="h-6 w-10 bg-white rounded border border-gray-100 flex items-center justify-center overflow-hidden p-0.5">
+          <img src="/payment-logos/visa.png" alt="VISA" className="max-h-full max-w-full object-contain" />
+        </div>
+        <div className="h-6 w-10 bg-white rounded border border-gray-100 flex items-center justify-center overflow-hidden p-0.5">
+          <img src="/payment-logos/stripe.png" alt="Stripe" className="max-h-full max-w-full object-contain" />
+        </div>
+        <div className="h-6 w-11 bg-white rounded border border-gray-100 flex items-center justify-center overflow-hidden p-0.5">
+          <img src="/payment-logos/apple-pay.png" alt="Apple Pay" className="max-h-full max-w-full object-contain" />
+        </div>
+        <div className="h-6 w-10 bg-white rounded border border-gray-100 flex items-center justify-center overflow-hidden p-0.5">
+          <img src="/payment-logos/shop-pay.png" alt="Shop Pay" className="max-h-full max-w-full object-contain" />
+        </div>
+        <div className="h-6 w-10 bg-white rounded border border-gray-100 flex items-center justify-center overflow-hidden p-0.5">
+          <img src="/payment-logos/klarna.png" alt="Klarna" className="max-h-full max-w-full object-contain" />
+        </div>
       </div>
       <div className="flex flex-wrap gap-2 justify-center">
+        {/* Row 2: UnionPay, Mastercard, Google Pay */}
         <div className="h-6 w-12 bg-white rounded border border-gray-100 flex items-center justify-center overflow-hidden p-0.5">
           <img src="/payment-logos/unionpay.png" alt="UnionPay" className="max-h-full max-w-full object-contain" />
         </div>
         <div className="h-6 w-10 bg-white rounded border border-gray-100 flex items-center justify-center overflow-hidden p-0.5">
           <img src="/payment-logos/mastercard.png" alt="Mastercard" className="max-h-full max-w-full object-contain" />
         </div>
-        <div className="h-6 w-10 bg-white rounded border border-gray-100 flex items-center justify-center overflow-hidden p-0.5">
+        <div className="h-6 w-11 bg-white rounded border border-gray-100 flex items-center justify-center overflow-hidden p-0.5">
           <img src="/payment-logos/google-pay.png" alt="Google Pay" className="max-h-full max-w-full object-contain" />
         </div>
       </div>
