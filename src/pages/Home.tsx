@@ -44,101 +44,39 @@ const stagger = { visible: { transition: { staggerChildren: 0.1 } } };
 const BRAND = "oklch(0.42 0.12 10)";
 const BRAND_GRADIENT = "linear-gradient(135deg, oklch(0.42 0.12 10), oklch(0.55 0.14 350))";
 
-/* ─── Payment SVG logos ─── */
-function MastercardLogo() {
-  return (
-    <svg viewBox="0 0 38 24" width="38" height="24" xmlns="http://www.w3.org/2000/svg">
-      <rect width="38" height="24" rx="3" fill="white" stroke="#E6E6E6" strokeWidth="0.5" />
-      <circle cx="15" cy="12" r="7" fill="#EB001B" />
-      <circle cx="23" cy="12" r="7" fill="#F79E1B" />
-      <path d="M19 6.8a7 7 0 0 1 0 10.4A7 7 0 0 1 19 6.8z" fill="#FF5F00" />
-    </svg>
-  );
-}
-function AmexLogo() {
-  return (
-    <svg viewBox="0 0 38 24" width="38" height="24" xmlns="http://www.w3.org/2000/svg">
-      <rect width="38" height="24" rx="3" fill="#2557D6" />
-      <text x="50%" y="15" textAnchor="middle" fill="white" fontSize="8" fontWeight="bold" fontFamily="Arial, sans-serif">AM</text>
-    </svg>
-  );
-}
-function VisaLogo() {
-  return (
-    <svg viewBox="0 0 38 24" width="38" height="24" xmlns="http://www.w3.org/2000/svg">
-      <rect width="38" height="24" rx="3" fill="white" stroke="#E6E6E6" strokeWidth="0.5" />
-      <text x="50%" y="16" textAnchor="middle" fill="#1A1F71" fontSize="11" fontWeight="bold" fontFamily="Arial, sans-serif" letterSpacing="1">VISA</text>
-    </svg>
-  );
-}
-function StripeLogo() {
-  return (
-    <svg viewBox="0 0 38 24" width="38" height="24" xmlns="http://www.w3.org/2000/svg">
-      <rect width="38" height="24" rx="3" fill="white" stroke="#E6E6E6" strokeWidth="0.5" />
-      <text x="50%" y="16" textAnchor="middle" fill="#635BFF" fontSize="10" fontWeight="600" fontFamily="Arial, sans-serif">stripe</text>
-    </svg>
-  );
-}
-function ApplePayLogo() {
-  return (
-    <svg viewBox="0 0 50 24" width="50" height="24" xmlns="http://www.w3.org/2000/svg">
-      <rect width="50" height="24" rx="3" fill="white" stroke="#E6E6E6" strokeWidth="0.8" />
-      {/* Apple logo mark */}
-      <text x="8" y="16" fill="#000" fontSize="13" fontFamily="-apple-system, BlinkMacSystemFont, sans-serif"></text>
-      <text x="50%" y="16" textAnchor="middle" fill="#000" fontSize="8.5" fontWeight="500" fontFamily="-apple-system, BlinkMacSystemFont, sans-serif"> Pay</text>
-    </svg>
-  );
-}
-function ShopPayLogo() {
-  return (
-    <svg viewBox="0 0 38 24" width="38" height="24" xmlns="http://www.w3.org/2000/svg">
-      <rect width="38" height="24" rx="3" fill="#5A31F4" />
-      <text x="50%" y="16" textAnchor="middle" fill="white" fontSize="9" fontWeight="600" fontFamily="Arial, sans-serif">shop</text>
-    </svg>
-  );
-}
-function KlarnaLogo() {
-  return (
-    <svg viewBox="0 0 38 24" width="38" height="24" xmlns="http://www.w3.org/2000/svg">
-      <rect width="38" height="24" rx="3" fill="#FFB3C7" />
-      <text x="50%" y="16" textAnchor="middle" fill="#17120E" fontSize="9" fontWeight="700" fontFamily="Arial, sans-serif">Klarna</text>
-    </svg>
-  );
-}
-function GooglePayLogo() {
-  return (
-    <svg viewBox="0 0 38 24" width="38" height="24" xmlns="http://www.w3.org/2000/svg">
-      <rect width="38" height="24" rx="3" fill="white" stroke="#E6E6E6" strokeWidth="0.5" />
-      <text x="50%" y="16" textAnchor="middle" fill="#3C4043" fontSize="8.5" fontWeight="500" fontFamily="Arial, sans-serif">G Pay</text>
-    </svg>
-  );
-}
-function UnionPayLogo() {
-  return (
-    <svg viewBox="0 0 46 24" width="46" height="24" xmlns="http://www.w3.org/2000/svg">
-      <rect width="46" height="24" rx="3" fill="#E21836" />
-      <text x="50%" y="10" textAnchor="middle" fill="white" fontSize="6" fontWeight="700" fontFamily="Arial, sans-serif">UnionPay</text>
-      <text x="50%" y="18" textAnchor="middle" fill="white" fontSize="5.5" fontWeight="400" fontFamily="Arial, sans-serif">银联</text>
-    </svg>
-  );
-}
-
+/* ─── Payment Logos ─── */
 function PaymentLogos() {
+  const logos = [
+    { name: "Mastercard", src: "/payment-logos/mastercard.png" },
+    { name: "AMEX", src: "/payment-logos/amex.png" },
+    { name: "VISA", src: "/payment-logos/visa.png" },
+    { name: "Stripe", src: "/payment-logos/stripe.png" },
+    { name: "Apple Pay", src: "/payment-logos/apple-pay.png" },
+    { name: "Shop Pay", src: "/payment-logos/shop-pay.png" },
+    { name: "Klarna", src: "/payment-logos/klarna.png" },
+    { name: "UnionPay", src: "/payment-logos/unionpay.png" },
+    { name: "Google Pay", src: "/payment-logos/google-pay.png" },
+  ];
+
   return (
     <div className="flex flex-col items-center gap-2 mt-4 w-full">
       <div className="flex flex-wrap gap-2 justify-center">
-        <div className="payment-badge"><MastercardLogo /></div>
-        <div className="payment-badge"><AmexLogo /></div>
-        <div className="payment-badge"><VisaLogo /></div>
-        <div className="payment-badge"><StripeLogo /></div>
-        <div className="payment-badge"><ApplePayLogo /></div>
-        <div className="payment-badge"><ShopPayLogo /></div>
-        <div className="payment-badge"><KlarnaLogo /></div>
+        {logos.slice(0, 7).map((logo) => (
+          <div key={logo.name} className="h-6 w-10 bg-white rounded border border-gray-100 flex items-center justify-center overflow-hidden p-0.5">
+            <img src={logo.src} alt={logo.name} className="max-h-full max-w-full object-contain" />
+          </div>
+        ))}
       </div>
       <div className="flex flex-wrap gap-2 justify-center">
-        <div className="payment-badge"><UnionPayLogo /></div>
-        <div className="payment-badge"><MastercardLogo /></div>
-        <div className="payment-badge"><GooglePayLogo /></div>
+        <div className="h-6 w-12 bg-white rounded border border-gray-100 flex items-center justify-center overflow-hidden p-0.5">
+          <img src="/payment-logos/unionpay.png" alt="UnionPay" className="max-h-full max-w-full object-contain" />
+        </div>
+        <div className="h-6 w-10 bg-white rounded border border-gray-100 flex items-center justify-center overflow-hidden p-0.5">
+          <img src="/payment-logos/mastercard.png" alt="Mastercard" className="max-h-full max-w-full object-contain" />
+        </div>
+        <div className="h-6 w-10 bg-white rounded border border-gray-100 flex items-center justify-center overflow-hidden p-0.5">
+          <img src="/payment-logos/google-pay.png" alt="Google Pay" className="max-h-full max-w-full object-contain" />
+        </div>
       </div>
     </div>
   );
