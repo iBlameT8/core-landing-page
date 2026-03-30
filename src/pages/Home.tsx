@@ -949,7 +949,7 @@ function SectionPricing() {
                         </div>
                       </div>
                       {/* Supply info */}
-                      <div className="mt-2 text-xs font-semibold text-center" style={{ color: BRAND }}>
+                      <div className="mt-2 ml-6 text-xs font-semibold text-left" style={{ color: BRAND }}>
                         Reicht für 50 Nächte
                       </div>
                       <div className="mt-2 ml-6 text-xs text-gray-500 flex items-center gap-1">
