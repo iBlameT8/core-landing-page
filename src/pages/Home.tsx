@@ -420,9 +420,9 @@ function SectionProblem() {
                 "Nach 2 Wochen hat meine Freundin mich gefragt, was ich mit meiner Haut gemacht habe. Sie sieht einfach so viel frischer aus."
               </p>
               <div className="flex items-center gap-2">
-                <div className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold text-white" style={{ background: BRAND }}>L</div>
+                <img src="/images/review-4.jpg" alt="Sana M." className="w-8 h-8 rounded-full object-cover flex-shrink-0 border border-gray-100" />
                 <div>
-                  <p className="text-xs font-semibold text-gray-700">Laura K.</p>
+                  <p className="text-xs font-semibold text-gray-700">Sana M.</p>
                   <p className="text-xs text-gray-400">Berlin, 23</p>
                 </div>
                 <span className="ml-auto text-xs text-gray-400 flex items-center gap-1">
