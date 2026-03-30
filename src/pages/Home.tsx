@@ -1192,16 +1192,16 @@ export default function Home() {
 
       {/* ── Sticky bottom CTA bar ── */}
       <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 py-2.5 px-3 md:px-6 flex items-center justify-between shadow-[0_-4px_20px_rgba(0,0,0,0.08)]">
-        <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 overflow-hidden">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 overflow-hidden flex-1">
           <div className="flex items-center gap-1.5 whitespace-nowrap">
             <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse flex-shrink-0" />
-            <span className="text-[9px] sm:text-xs text-gray-500 leading-tight">
+            <span className="text-[11px] sm:text-xs text-gray-500 leading-tight">
               <strong>142</strong> Bestellungen heute <span className="hidden xs:inline">·</span> <br className="xs:hidden" /> Garantie: Kein Fischgeschmack
             </span>
           </div>
           <div className="flex items-center gap-1.5">
             <Stars />
-            <span className="text-[10px] sm:text-xs text-gray-600 font-bold">4.4/5</span>
+            <span className="text-[11px] sm:text-xs text-gray-600 font-bold">4.4/5 (142)</span>
           </div>
         </div>
         <a href="#pricing"
