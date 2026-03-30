@@ -132,8 +132,8 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
 }
 
 /* ─── Testimonial Card ─── */
-function TestimonialCard({ initials, name, location, title, text }: {
-  initials: string; name: string; location: string; title: string; text: string;
+function TestimonialCard({ image, name, location, title, text }: {
+  image: string; name: string; location: string; title: string; text: string;
 }) {
   return (
     <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm flex-shrink-0 w-[300px] md:w-[340px]">
@@ -141,10 +141,7 @@ function TestimonialCard({ initials, name, location, title, text }: {
       <p className="font-semibold text-gray-800 text-sm mt-3 mb-2">{title}</p>
       <p className="text-xs text-gray-500 leading-relaxed mb-4 line-clamp-4">{text}</p>
       <div className="flex items-center gap-2.5">
-        <div className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold text-white flex-shrink-0"
-          style={{ background: BRAND }}>
-          {initials}
-        </div>
+        <img src={image} alt={name} className="w-10 h-10 rounded-full object-cover flex-shrink-0 border border-gray-100" />
         <div>
           <p className="text-xs font-semibold text-gray-700">{name}</p>
           <p className="text-xs text-gray-400">{location}</p>
@@ -747,9 +744,9 @@ function SectionTestimonials() {
     headline: "Über 7.800 begeisterte\nKundinnen",
     ratingText: "von 918 Bewertungen",
     items: [
-      { name: "Sarah M.", title: "Endlich sichtbare Ergebnisse", text: "Nach 4 Wochen corē kann ich einen großen Unterschied sehen. Meine Haut ist glatter, strahlender und fühlt sich hydratisiert an. Ich bin begeistert!" },
-      { name: "Julia K.", title: "Einfach zu nehmen", text: "Der Berry-Shot schmeckt lecker und ist so praktisch. Ich nehme ihn jeden Abend vor dem Schlafengehen. Meine Haut dankt es mir!" },
-      { name: "Anna L.", title: "Kein Fischgeschmack", text: "Ich war skeptisch, aber corē schmeckt wirklich nach Beeren, nicht nach Fisch. Und die Ergebnisse sprechen für sich!" },
+      { name: "Leyla Y.", location: "Berlin", image: "/images/review-1.jpg", title: "Endlich sichtbare Ergebnisse", text: "Nach 4 Wochen corē kann ich einen großen Unterschied sehen. Meine Haut ist glatter, strahlender und fühlt sich hydratisiert an. Ich bin begeistert!" },
+      { name: "Amina B.", location: "Frankfurt", image: "/images/review-3.jpg", title: "Einfach zu nehmen", text: "Der Berry-Shot schmeckt lecker und ist so praktisch. Ich nehme ihn jeden Abend vor dem Schlafengehen. Meine Haut dankt es mir!" },
+      { name: "Elena K.", location: "München", image: "/images/review-2.jpg", title: "Kein Fischgeschmack", text: "Ich war skeptisch, aber corē schmeckt wirklich nach Beeren, nicht nach Fisch. Und die Ergebnisse sprechen für sich!" },
     ]
   };
   const carouselRef = useRef<HTMLDivElement>(null);
