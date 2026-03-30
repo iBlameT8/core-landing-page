@@ -808,6 +808,7 @@ function SectionPricing() {
     urgencyText: "**22% günstiger** mit dem Launch-Special – nur für kurze Zeit!",
     subscriptionLabel: "Abo",
     subscriptionBadge: "22% sparen",
+    subscriptionPopular: "Meistgewählt",
     subscriptionSub: "Jederzeit kündbar",
     subscriptionPrice: "€38,99",
     subscriptionOriginal: "€49,99",
@@ -839,7 +840,29 @@ function SectionPricing() {
             style={{ fontFamily: "'DM Serif Display', serif" }}>
             {p.headline}
           </motion.h2>
-          <motion.p variants={fadeUp} className="text-center text-gray-500 mb-10 text-sm">{p.subheadline}</motion.p>
+          <motion.p variants={fadeUp} className="text-center text-gray-500 mb-6 text-sm">{p.subheadline}</motion.p>
+
+          {/* Subscription Toggle */}
+          <motion.div variants={fadeUp} className="flex justify-center mb-10">
+            <div className="bg-gray-100 p-1 rounded-full flex items-center relative w-64">
+              <div 
+                className="absolute h-8 w-[calc(50%-4px)] bg-white rounded-full shadow-sm transition-all duration-300 ease-in-out"
+                style={{ left: selectedPlan === "abo" ? "4px" : "calc(50% + 0px)" }}
+              />
+              <button 
+                onClick={() => setSelectedPlan("abo")}
+                className={`relative z-10 flex-1 py-1.5 text-xs font-bold transition-colors ${selectedPlan === "abo" ? "text-gray-900" : "text-gray-500"}`}
+              >
+                {p.subscriptionLabel}
+              </button>
+              <button 
+                onClick={() => setSelectedPlan("einmal")}
+                className={`relative z-10 flex-1 py-1.5 text-xs font-bold transition-colors ${selectedPlan === "einmal" ? "text-gray-900" : "text-gray-500"}`}
+              >
+                {p.oneTimeLabel}
+              </button>
+            </div>
+          </motion.div>
 
           <motion.div variants={fadeUp} className="flex items-center justify-center gap-2 mb-8">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
@@ -896,7 +919,8 @@ function SectionPricing() {
                           <div>
                             <div className="flex items-center gap-2 flex-wrap">
                               <span className="text-sm font-semibold text-gray-800">{p.subscriptionLabel}</span>
-                              <span className="text-xs font-bold px-2 py-0.5 rounded-full text-white" style={{ background: BRAND }}>{p.subscriptionBadge}</span>
+                              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full text-white" style={{ background: BRAND }}>{p.subscriptionBadge}</span>
+                              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 border border-amber-200">{p.subscriptionPopular}</span>
                             </div>
                             <p className="text-xs text-gray-400 mt-0.5">{p.subscriptionSub}</p>
                           </div>
@@ -977,6 +1001,7 @@ function SectionPricing() {
 
 function SectionFaq() {
   const faqItems = [
+    { q: "Kann ich mein Abo jederzeit kündigen?", a: "Ja, absolut. Du kannst dein Abonnement jederzeit mit nur zwei Klicks in deinem Kundenkonto kündigen oder pausieren. Es gibt keine Mindestlaufzeit oder versteckte Gebühren." },
     { q: "Wie lange dauert es, bis ich Ergebnisse sehe?", a: "Die meisten Kundinnen berichten von sichtbaren Ergebnissen nach 4 Wochen. Für optimale Ergebnisse empfehlen wir 12 Wochen." },
     { q: "Kann ich corē mit anderen Supplements kombinieren?", a: "Ja, corē kann mit anderen Supplements kombiniert werden. Konsultiere deinen Arzt, wenn du Medikamente nimmst." },
     { q: "Ist corē vegan?", a: "Nein, corē enthält Meereskollagen. Wir arbeiten an einer veganen Alternative." },
