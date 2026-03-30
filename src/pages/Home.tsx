@@ -928,11 +928,8 @@ function SectionPricing() {
                         <div className="text-right flex-shrink-0">
                           <div className="text-lg font-bold" style={{ fontFamily: "'DM Serif Display', serif", color: BRAND }}>{p.subscriptionPrice}</div>
                           <div className="text-xs text-gray-400 line-through">{p.subscriptionOriginal}</div>
-                          <div className="text-xs font-semibold" style={{ color: BRAND }}>{p.subscriptionSavings}</div>
+                          <div className="text-xs font-semibold" style={{ color: BRAND }}>{p.subscriptionPerNight}</div>
                         </div>
-                      </div>
-                      <div className="mt-2 ml-6 text-xs text-gray-500">
-                        {p.subscriptionPerNight}
                       </div>
                     </div>
                   </label>
