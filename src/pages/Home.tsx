@@ -813,11 +813,11 @@ function SectionPricing() {
     subscriptionPrice: "€38,99",
     subscriptionOriginal: "€49,99",
     subscriptionSavings: "Du sparst 11€",
-    subscriptionPerNight: "€0,78/Nacht",
+
     oneTimeLabel: "Einmalig",
     oneTimeSub: "Keine Verpflichtung",
     oneTimePrice: "€49,99",
-    oneTimePerNight: "€1,00/Nacht",
+
     included: ["30 Tage Geld-zurück-Garantie", "Versand in 1-2 Tagen", "Kein Fischgeschmack"],
     ctaSubscription: "Jetzt abonnieren",
     ctaOneTime: "Jetzt kaufen",
@@ -928,7 +928,7 @@ function SectionPricing() {
                         <div className="text-right flex-shrink-0">
                           <div className="text-lg font-bold" style={{ fontFamily: "'DM Serif Display', serif", color: BRAND }}>{p.subscriptionPrice}</div>
                           <div className="text-xs text-gray-400 line-through">{p.subscriptionOriginal}</div>
-                          <div className="text-xs font-semibold" style={{ color: BRAND }}>{p.subscriptionPerNight}</div>
+
                         </div>
                       </div>
                     </div>
@@ -950,7 +950,7 @@ function SectionPricing() {
                         </div>
                         <div className="text-right flex-shrink-0">
                           <div className="text-lg font-bold text-gray-800" style={{ fontFamily: "'DM Serif Display', serif" }}>{p.oneTimePrice}</div>
-                          <div className="text-xs text-gray-400">{p.oneTimePerNight}</div>
+
                         </div>
                       </div>
                     </div>
