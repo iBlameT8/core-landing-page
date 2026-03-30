@@ -236,45 +236,9 @@ const TRUST_ICONS = [
 
 /* ─── Pricing Product Visual ─── */
 function PricingProductVisual() {
-  const p = { productName: "corē Nacht-Kollagen", productSub: "Berry Shot · 10ml" };
-  const img = null;
-
   return (
-    <div className="rounded-2xl overflow-hidden relative w-full" style={{ minHeight: 420, background: "oklch(0.97 0.015 10)" }}>
-      {img ? (
-        <>
-          <img src={img} alt="Produktbild" className="w-full h-full object-cover absolute inset-0" style={{ minHeight: 420 }} />
-
-        </>
-      ) : (
-        <div className="relative flex flex-col items-center justify-center" style={{ minHeight: 420, padding: "2.5rem" }}>
-          {/* Large full-area branded placeholder */}
-          <div className="absolute inset-0 opacity-5" style={{ background: BRAND_GRADIENT }} />
-          {/* Big product bottle mockup */}
-          <div className="relative z-10 flex flex-col items-center">
-            {/* Bottle shape */}
-            <div className="relative mb-6">
-              <div className="w-32 h-56 rounded-[2rem] shadow-2xl flex flex-col items-center justify-center overflow-hidden"
-                style={{ background: BRAND_GRADIENT }}>
-                <div className="text-white text-center px-4">
-                  <div className="text-3xl font-bold mb-1" style={{ fontFamily: "'DM Serif Display', serif" }}>corē</div>
-                  <div className="w-12 h-px bg-white/40 mx-auto my-2" />
-                  <div className="text-[10px] uppercase tracking-widest opacity-80 font-semibold">Nacht-Kollagen</div>
-                  <div className="text-[9px] opacity-60 mt-1">Berry Shot · 10ml</div>
-                </div>
-              </div>
-              {/* Bottle cap */}
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-10 h-6 rounded-t-xl"
-                style={{ background: "oklch(0.32 0.1 10)" }} />
-              {/* Shine */}
-              <div className="absolute top-6 left-4 w-2 h-16 rounded-full bg-white/20" />
-            </div>
-            <p className="text-sm font-semibold text-gray-700 text-center">{p.productName}</p>
-            <p className="text-xs text-gray-500 mt-1 text-center">{p.productSub}</p>
-            </div>
-
-        </div>
-      )}
+    <div className="rounded-2xl overflow-hidden relative w-full flex items-center justify-center" style={{ minHeight: 420, background: "oklch(0.97 0.015 10)" }}>
+      <img src="/BasicFlasche.png" alt="corē Nacht-Kollagen Flasche" className="object-contain" style={{ maxHeight: 400, width: "auto" }} />
     </div>
   );
 }
@@ -983,6 +947,13 @@ function SectionPricing() {
                           <div className="text-xs text-gray-400 line-through">{p.subscriptionOriginal}</div>
                           <div className="text-xs font-semibold" style={{ color: BRAND }}>{p.subscriptionSavings}</div>
                         </div>
+                      </div>
+                      {/* Green wave sparkline with supply info */}
+                      <div className="mt-2 ml-6 flex items-center gap-2">
+                        <svg viewBox="0 0 120 24" width="80" height="16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                          <path d="M0 18 C10 18, 15 6, 25 10 C35 14, 40 4, 50 8 C60 12, 65 4, 75 7 C85 10, 90 2, 100 5 C110 8, 115 4, 120 6" fill="none" stroke="#22c55e" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                        <span className="text-xs font-semibold text-green-600">Reicht für 50 Nächte</span>
                       </div>
                       <div className="mt-2 ml-6 text-xs text-gray-500 flex items-center gap-1">
                         <Sparkles className="w-3 h-3" style={{ color: BRAND }} />
