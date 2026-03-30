@@ -1200,8 +1200,8 @@ export default function Home() {
             </span>
           </div>
           <div className="flex items-center gap-1.5">
+            <span className="text-[11px] sm:text-xs text-gray-600 font-bold">(918) 4.4/5</span>
             <Stars />
-            <span className="text-[11px] sm:text-xs text-gray-600 font-bold">4.4/5 (142)</span>
           </div>
         </div>
         <a href="#pricing"
