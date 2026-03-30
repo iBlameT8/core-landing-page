@@ -931,8 +931,7 @@ function SectionPricing() {
                           <div className="text-xs font-semibold" style={{ color: BRAND }}>{p.subscriptionSavings}</div>
                         </div>
                       </div>
-                      <div className="mt-2 ml-6 text-xs text-gray-500 flex items-center gap-1">
-                        <Sparkles className="w-3 h-3" style={{ color: BRAND }} />
+                      <div className="mt-2 ml-6 text-xs text-gray-500">
                         {p.subscriptionPerNight}
                       </div>
                     </div>
