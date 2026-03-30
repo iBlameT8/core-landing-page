@@ -948,12 +948,9 @@ function SectionPricing() {
                           <div className="text-xs font-semibold" style={{ color: BRAND }}>{p.subscriptionSavings}</div>
                         </div>
                       </div>
-                      {/* Green wave sparkline with supply info */}
-                      <div className="mt-2 ml-6 flex items-center gap-2">
-                        <svg viewBox="0 0 120 24" width="80" height="16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                          <path d="M0 18 C10 18, 15 6, 25 10 C35 14, 40 4, 50 8 C60 12, 65 4, 75 7 C85 10, 90 2, 100 5 C110 8, 115 4, 120 6" fill="none" stroke="#22c55e" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                        <span className="text-xs font-semibold text-green-600">Reicht für 50 Nächte</span>
+                      {/* Supply info */}
+                      <div className="mt-2 text-xs font-semibold text-center" style={{ color: BRAND }}>
+                        Reicht für 50 Nächte
                       </div>
                       <div className="mt-2 ml-6 text-xs text-gray-500 flex items-center gap-1">
                         <Sparkles className="w-3 h-3" style={{ color: BRAND }} />
