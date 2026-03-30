@@ -224,6 +224,7 @@ const STEP_ICONS = [
   <Droplets className="w-5 h-5" />,
   <Moon className="w-5 h-5" />,
   <Sun className="w-5 h-5" />,
+  <Sparkles className="w-5 h-5" />,
 ];
 
 /* ─── TRUST BADGE ICONS ─── */
