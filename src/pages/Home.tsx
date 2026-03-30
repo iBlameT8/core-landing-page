@@ -811,7 +811,7 @@ function SectionPricing() {
     subscriptionSub: "Jederzeit kündbar",
     subscriptionPrice: "€38,99",
     subscriptionOriginal: "€49,99",
-    subscriptionSavings: "€11,00 Ersparnis",
+    subscriptionSavings: "spare 11€",
     subscriptionPerNight: "€1,30/Nacht",
     oneTimeLabel: "Einmalig",
     oneTimeSub: "Keine Verpflichtung",
