@@ -325,9 +325,9 @@ function SectionHero() {
     cta: "Jetzt ausprobieren",
     badges: ["Waldbeerengeschmack", "Kein Fischgeschmack", "Made in Germany", "Labor geprüft", "10ml/Nacht", "GMP Zertifiziert"],
     trustLine: "30 Tage Geld-zurück-Garantie",
-    ratingText: "von 142 Bewertungen",
+    ratingText: "von 918 Bewertungen",
     stats: [
-      { value: "142+", label: "Begeisterte Kundinnen" },
+      { value: "7.800+", label: "Begeisterte Kundinnen" },
       { value: "4 Wochen", label: "Bis zu sichtbaren Ergebnissen" },
       { value: "10x", label: "Bessere Aufnahme als Pulver" }
     ]
@@ -408,7 +408,7 @@ function SectionHero() {
 function SectionStats() {
   const h = {
     stats: [
-      { value: "142+", label: "Begeisterte Kundinnen" },
+      { value: "7.800+", label: "Begeisterte Kundinnen" },
       { value: "4 Wochen", label: "Bis zu sichtbaren Ergebnissen" },
       { value: "10x", label: "Bessere Aufnahme als Pulver" }
     ]
@@ -821,8 +821,8 @@ function SectionComparison() {
 function SectionTestimonials() {
   const t = {
     eyebrow: "Was unsere Kundinnen sagen",
-    headline: "Über 142 begeisterte\nKundinnen",
-    ratingText: "von 142 Bewertungen",
+    headline: "Über 7.800 begeisterte\nKundinnen",
+    ratingText: "von 918 Bewertungen",
     items: [
       { name: "Sarah M.", title: "Endlich sichtbare Ergebnisse", text: "Nach 4 Wochen corē kann ich einen großen Unterschied sehen. Meine Haut ist glatter, strahlender und fühlt sich hydratisiert an. Ich bin begeistert!" },
       { name: "Julia K.", title: "Einfach zu nehmen", text: "Der Berry-Shot schmeckt lecker und ist so praktisch. Ich nehme ihn jeden Abend vor dem Schlafengehen. Meine Haut dankt es mir!" },
