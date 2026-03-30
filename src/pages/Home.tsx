@@ -931,10 +931,6 @@ function SectionPricing() {
                           <div className="text-xs font-semibold" style={{ color: BRAND }}>{p.subscriptionSavings}</div>
                         </div>
                       </div>
-                      {/* Supply info */}
-                      <div className="mt-2 ml-6 text-xs font-semibold text-left" style={{ color: BRAND }}>
-                        Reicht für 50 Nächte
-                      </div>
                       <div className="mt-2 ml-6 text-xs text-gray-500 flex items-center gap-1">
                         <Sparkles className="w-3 h-3" style={{ color: BRAND }} />
                         {p.subscriptionPerNight}
@@ -971,7 +967,7 @@ function SectionPricing() {
                 <ul className="space-y-1.5">
                   {[
                     ...p.included,
-                    ...(selectedPlan === "abo" ? ["Jederzeit kündbar", "22% günstiger als Einzelkauf"] : []),
+                    ...(selectedPlan === "abo" ? ["Jederzeit kündbar", "22% günstiger als Einzelkauf", "Lieferung alle 50 Nächte"] : ["Reicht für 50 Nächte"]),
                   ].map((item: any) => (
                     <li key={item} className="flex items-center gap-2 text-xs text-gray-600">
                       <Check className="w-3.5 h-3.5 flex-shrink-0" style={{ color: BRAND }} />
