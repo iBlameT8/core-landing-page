@@ -1240,10 +1240,10 @@ export default function Home() {
       {/* ── Sticky bottom CTA bar ── */}
       <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 py-3 px-4 flex items-center justify-between shadow-lg">
         <div className="flex items-center gap-3">
-          <div className="hidden sm:flex items-center gap-1.5">
+          <div className="flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            <span className="text-xs text-gray-500">
-              <strong>1.293</strong> Bestellungen heute · Garantie: Kein Fischgeschmack
+            <span className="text-[10px] sm:text-xs text-gray-500">
+              <strong>142</strong> Bestellungen heute · Garantie: Kein Fischgeschmack
             </span>
           </div>
           <div className="flex items-center gap-1">
