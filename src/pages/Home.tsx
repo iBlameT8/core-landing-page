@@ -1191,26 +1191,26 @@ export default function Home() {
       <SectionFooter />
 
       {/* ── Sticky bottom CTA bar ── */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 py-3 px-4 flex items-center justify-between shadow-lg">
-        <div className="flex items-center gap-3">
-          <div className="flex items-center gap-1.5">
-            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            <span className="text-[10px] sm:text-xs text-gray-500">
-              <strong>142</strong> Bestellungen heute · Garantie: Kein Fischgeschmack
+      <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 py-2.5 px-3 md:px-6 flex items-center justify-between shadow-[0_-4px_20px_rgba(0,0,0,0.08)]">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 overflow-hidden">
+          <div className="flex items-center gap-1.5 whitespace-nowrap">
+            <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse flex-shrink-0" />
+            <span className="text-[9px] sm:text-xs text-gray-500 leading-tight">
+              <strong>142</strong> Bestellungen heute <span className="hidden xs:inline">·</span> <br className="xs:hidden" /> Garantie: Kein Fischgeschmack
             </span>
           </div>
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1.5">
             <Stars />
-            <span className="text-xs text-gray-600 font-medium">4.4/5</span>
+            <span className="text-[10px] sm:text-xs text-gray-600 font-bold">4.4/5</span>
           </div>
         </div>
         <a href="#pricing"
-          className="text-xs font-bold px-5 py-2.5 rounded-full text-white transition-opacity hover:opacity-90 shadow-md"
+          className="text-[10px] sm:text-xs font-bold px-4 sm:px-6 py-2 sm:py-3 rounded-full text-white transition-all hover:opacity-90 active:scale-95 shadow-md whitespace-nowrap ml-2"
           style={{ background: BRAND_GRADIENT }}>
           Jetzt 22% sparen →
         </a>
       </div>
-      <div className="h-14" />
+      <div className="h-20 sm:h-16" />
     </div>
   );
 }
