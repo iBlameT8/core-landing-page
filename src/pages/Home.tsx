@@ -828,6 +828,12 @@ function SectionPricing() {
     chatCta: "Kontakt"
   };
   const [selectedPlan, setSelectedPlan] = useState<"abo" | "einmal">("abo");
+
+  const CHECKOUT_LINKS = {
+    abo: "https://xn--cor-5qa.de/checkouts/cn/hWNAbcXgQ8ZqbjXRBw1itlUR/de-lu?_r=AQAB74NhsCLFAqJngY2bhxoBvSkU6mh4569VUXgql4elBTc&auto_redirect=false&edge_redirect=true&skip_shop_pay=true",
+    einmal: "https://xn--cor-5qa.de/checkouts/cn/hWNAbcXgQ8ZqbjXRBw1itlUR/de-lu?_r=AQABADzI4Q6VXZonpCDCQzqIXLC5ymXzNomD7SyvU9UL3FI"
+  };
+
   return (
     <section id="pricing" className="py-20 md:py-28" style={{ background: "oklch(0.98 0.005 10)" }}>
       <div className="container">
@@ -970,11 +976,12 @@ function SectionPricing() {
                 </ul>
               </div>
 
-              <button
-                className="w-full py-3.5 rounded-full text-white text-sm font-semibold transition-all hover:opacity-90 hover:scale-[1.01] shadow-lg"
+              <a
+                href={CHECKOUT_LINKS[selectedPlan]}
+                className="w-full py-3.5 rounded-full text-white text-sm font-semibold transition-all hover:opacity-90 hover:scale-[1.01] shadow-lg text-center"
                 style={{ background: BRAND_GRADIENT }}>
                 {selectedPlan === "abo" ? p.ctaSubscription : p.ctaOneTime}
-              </button>
+              </a>
 
               <div className="text-center">
                 <p className="text-xs text-gray-400 mb-2">Sichere Zahlung mit:</p>
